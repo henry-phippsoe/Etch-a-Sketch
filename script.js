@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (let i = 0; i < num; i++) {
         const div = document.createElement('div');
-        div.classList.add("griditem");
+        div.id = "griditem";
+        div.addEventListener("mouseenter", () => {
+            div.style.backgroundColor = "black";
+        });
         container.appendChild(div);
     }
+
 });

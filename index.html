@@ -9,7 +9,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-direction: column;
                 height: 100vh;
                 width: 100vw;
             }
@@ -17,10 +16,14 @@
             .container {
                 display: flex;
                 flex-wrap: wrap;
+                width: 400px;
+                height: 400px;
                 border: 1px solid black;
             }
 
             #griditem {
+                height: 16px;
+                width: 16px;
                 background-color: bisque;
                 box-sizing: border-box;
             }
@@ -29,25 +32,11 @@
                 background-color: black;
             }
 
-            .pxsize {
-                display: flex;
-            }
-
-            button {
-                display: flex;
-                font-weight: bold;
-                width: 200px;
-                height: 50px;
-                margin-bottom: 100px;
-                align-items: center;
-                justify-content: center;
-            }
-
         </style>
     </head>
     <body>
         <script src="script.js"></script>
-        <button onclick="generateNew()">GENERATE NEW</button>
+
         <div class="container"></div>
     </body>
 </html>

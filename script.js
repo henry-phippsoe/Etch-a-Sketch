@@ -1,7 +1,10 @@
 function newBoard(numSquares) {
     const container = document.querySelector(".container");
     const gridItem = document.getElementById("griditem");
-    const num = (400 / numSquares) ** 2;
+    const sqsize = (400 / numSquares);
+    const num =  sqsize ** 2;
+
+    container.innerHTML = '';
 
     console.log(num);
     console.log(window.getComputedStyle(container).getPropertyValue('width'));
@@ -9,12 +12,12 @@ function newBoard(numSquares) {
     for (let i = 0; i < num; i++) {
         const div = document.createElement('div');
         div.id = "griditem";
+        div.style.width = sqsize;
+        div.style.height = sqsize;
         div.addEventListener("mouseenter", () => {
             div.style.backgroundColor = "black";
         });
         container.appendChild(div);
     }
-
-
 
 }

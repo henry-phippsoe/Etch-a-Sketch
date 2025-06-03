@@ -1,6 +1,10 @@
 function newBoard(numSquares) {
+    if (numSquares > 100) {
+        newBoard(prompt('Please input squares per side: '));
+    }
+
     const container = document.querySelector(".container");
-    const gridItem = document.getElementById("griditem")
+    const gridItem = document.getElementById("griditem");
 
     container.innerHTML = '';
 

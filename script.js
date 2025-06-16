@@ -21,3 +21,5 @@ function newBoard(numSquares) {
     }
 
 }
+
+newBoard(16);
